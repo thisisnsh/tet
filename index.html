@@ -185,12 +185,23 @@
               </label>
               <label>
                 <span>Phone Number</span>
-                <input name="phone" type="tel" inputmode="tel" autocomplete="tel" required>
+                <input
+                  name="phone"
+                  type="tel"
+                  inputmode="numeric"
+                  autocomplete="tel"
+                  pattern="[6-9][0-9]{9}"
+                  minlength="10"
+                  maxlength="10"
+                  placeholder="10-digit Indian mobile number"
+                  title="Enter a 10-digit Indian mobile number beginning with 6, 7, 8, or 9"
+                  required
+                >
               </label>
             </div>
             <label>
               <span>Solar Plant Capacity (kW)</span>
-              <input name="capacity" inputmode="decimal">
+              <input name="capacity" type="number" inputmode="decimal" min="0.1" step="0.1" placeholder="e.g. 5">
             </label>
             <label>
               <span>House Address</span>
@@ -205,9 +216,36 @@
     </main>
 
     <footer class="site-footer">
-      <p>Copyright &copy; <span id="copyright-year">2024</span></p>
-      <p>Third Eye Tradezone</p>
-      <p>GST No. 08AMGPR6333R1Z8</p>
+      <div class="map-section">
+        <div class="page-width">
+          <div class="map-heading">
+            <div>
+              <p class="eyebrow">Head Office</p>
+              <h2>Find us in Kota</h2>
+            </div>
+            <a
+              href="https://www.google.com/maps/search/?api=1&amp;query=58%2C%20Mamta%20Bhawan%2C%20Shiv%20Nagar%2C%20Police%20Line%2C%20Baran%20Road%2C%20Kota%20324001%2C%20Rajasthan"
+              target="_blank"
+              rel="noopener noreferrer"
+            >Open in Google Maps</a>
+          </div>
+          <iframe
+            title="Google Map showing the Third Eye Tradezone head office"
+            src="https://www.google.com/maps?q=58%2C%20Mamta%20Bhawan%2C%20Shiv%20Nagar%2C%20Police%20Line%2C%20Baran%20Road%2C%20Kota%20324001%2C%20Rajasthan&amp;output=embed"
+            width="980"
+            height="360"
+            style="border: 0"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            allowfullscreen
+          ></iframe>
+        </div>
+      </div>
+      <div class="footer-legal">
+        <p>Copyright &copy; <span id="copyright-year">2024</span></p>
+        <p>Third Eye Tradezone</p>
+        <p>GST No. 08AMGPR6333R1Z8</p>
+      </div>
     </footer>
   </body>
 </html>
