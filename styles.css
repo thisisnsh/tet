@@ -974,6 +974,10 @@ a {
   line-height: 1.65;
 }
 
+.contact-panel address > span {
+  display: block;
+}
+
 .contact-panel address strong {
   color: var(--white);
 }
