@@ -528,12 +528,16 @@ a {
   color: var(--green);
 }
 
+.proof-band {
+  margin-top: 26px;
+  background: linear-gradient(to bottom, var(--surface) 0 50%, var(--white) 50% 100%);
+}
+
 .proof-strip {
   position: relative;
   z-index: 2;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  margin-top: 26px;
   padding: 28px 10px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -1342,9 +1346,12 @@ a {
     right: -8px;
   }
 
+  .proof-band {
+    margin-top: 66px;
+  }
+
   .proof-strip {
     grid-template-columns: repeat(2, 1fr);
-    margin-top: 66px;
   }
 
   .distributor-feature {
@@ -1480,8 +1487,11 @@ a {
     right: 10px;
   }
 
-  .proof-strip {
+  .proof-band {
     margin-top: 50px;
+  }
+
+  .proof-strip {
     padding: 0;
   }
 

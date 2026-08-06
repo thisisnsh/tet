@@ -137,8 +137,15 @@ window.addEventListener("resize", () => {
 const campaignImage = document.querySelector("#campaign-image");
 const campaignDots = document.querySelector("#campaign-dots");
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+const brandLink = document.querySelector(".brand");
 let campaignIndex = 0;
 let campaignTimer;
+
+brandLink.addEventListener("click", (event) => {
+  event.preventDefault();
+  window.scrollTo({ top: 0, behavior: reducedMotion ? "auto" : "smooth" });
+  window.history.replaceState(null, "", `${window.location.pathname}${window.location.search}`);
+});
 
 function renderCampaign() {
   const campaign = campaigns[campaignIndex];
