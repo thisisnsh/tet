@@ -457,6 +457,36 @@ a {
   box-shadow: 0 2px 0 var(--blue);
 }
 
+.solar-form .phone-input {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  border-bottom: 1px solid #111;
+}
+
+.solar-form .phone-prefix {
+  flex: none;
+  margin: 0;
+  padding-right: 8px;
+  color: #333;
+  font-size: 1rem;
+}
+
+.solar-form .phone-input input {
+  min-width: 0;
+  border-bottom: 0;
+}
+
+.solar-form .phone-input input:focus {
+  box-shadow: none;
+}
+
+.solar-form .phone-input:focus-within {
+  border-bottom-color: var(--blue);
+  box-shadow: 0 2px 0 var(--blue);
+}
+
 .solar-form button {
   width: 110px;
   min-height: 36px;

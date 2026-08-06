@@ -144,6 +144,15 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
+const phoneInput = document.querySelector("[name=phone]");
+
+phoneInput.addEventListener("input", () => {
+  let digits = phoneInput.value.replace(/\D/g, "");
+  if (digits.length > 10 && digits.startsWith("91")) digits = digits.slice(2);
+  digits = digits.slice(0, 10);
+  phoneInput.value = digits.length > 5 ? `${digits.slice(0, 5)} ${digits.slice(5)}` : digits;
+});
+
 document.querySelector("#solar-form").addEventListener("submit", (event) => {
   event.preventDefault();
   const form = event.currentTarget;
@@ -152,7 +161,7 @@ document.querySelector("#solar-form").addEventListener("submit", (event) => {
     "Hello Third Eye Tradezone, I would like to apply for rooftop solar.",
     "",
     `Name: ${data.get("name")}`,
-    `Phone: ${data.get("phone")}`,
+    `Phone: +91 ${data.get("phone")}`,
     `Solar Plant Capacity: ${data.get("capacity") || "Not specified"} kW`,
     `House Address: ${data.get("address") || "Not specified"}`,
   ].join("\n");

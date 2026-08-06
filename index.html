@@ -185,18 +185,22 @@
               </label>
               <label>
                 <span>Phone Number</span>
-                <input
-                  name="phone"
-                  type="tel"
-                  inputmode="numeric"
-                  autocomplete="tel"
-                  pattern="[6-9][0-9]{9}"
-                  minlength="10"
-                  maxlength="10"
-                  placeholder="10-digit Indian mobile number"
-                  title="Enter a 10-digit Indian mobile number beginning with 6, 7, 8, or 9"
-                  required
-                >
+                <span class="phone-input">
+                  <span class="phone-prefix" aria-hidden="true">+91</span>
+                  <input
+                    name="phone"
+                    type="tel"
+                    inputmode="numeric"
+                    autocomplete="tel-national"
+                    pattern="[6-9][0-9]{4} [0-9]{5}"
+                    minlength="11"
+                    maxlength="11"
+                    placeholder="00000 00000"
+                    title="Enter a 10-digit Indian mobile number beginning with 6, 7, 8, or 9"
+                    aria-label="Indian mobile number after country code plus 91"
+                    required
+                  >
+                </span>
               </label>
             </div>
             <label>
@@ -231,12 +235,12 @@
           </div>
           <iframe
             title="Google Map showing the Third Eye Tradezone head office"
-            src="https://www.google.com/maps?q=58%2C%20Mamta%20Bhawan%2C%20Shiv%20Nagar%2C%20Police%20Line%2C%20Baran%20Road%2C%20Kota%20324001%2C%20Rajasthan&amp;output=embed"
-            width="980"
-            height="360"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d303883.8257160266!2d75.56673659453126!3d25.18632510000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396f9ac14563e15b%3A0x73aff1cf0933f23e!2sThird%20Eye%20Tradezone%20-Solar%20Energy%20Expert!5e1!3m2!1sen!2sus!4v1786040314543!5m2!1sen!2sus"
+            width="600"
+            height="450"
             style="border: 0"
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
+            referrerpolicy="strict-origin-when-cross-origin"
             allowfullscreen
           ></iframe>
         </div>
