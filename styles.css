@@ -315,11 +315,13 @@ a {
 
 .nav-call {
   display: grid;
+  justify-items: center;
   padding: 9px 17px;
   border-radius: 999px;
   color: var(--white);
   background: var(--navy);
   line-height: 1.15;
+  text-align: center;
   text-decoration: none;
 }
 
