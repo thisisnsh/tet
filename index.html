@@ -3,173 +3,277 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#075b99">
+    <meta name="theme-color" content="#ffffff">
     <meta
       name="description"
-      content="Third Eye Tradezone is an empanelled rooftop solar vendor serving Kota Division, Rajasthan, and an authorized distributor of Premier Energies."
+      content="Third Eye Tradezone provides professional rooftop solar installation and PM Surya Ghar support across Kota Division, Rajasthan."
     >
-    <meta property="og:title" content="Third Eye Tradezone — Solar Energy Expert">
+    <meta property="og:title" content="Third Eye Solar — Rooftop Solar in Kota">
     <meta
       property="og:description"
-      content="Rooftop solar installation and PM Surya Ghar support in Kota Division, Rajasthan."
+      content="Professional rooftop solar systems, subsidy guidance, and installation support across Kota Division."
     >
     <meta property="og:type" content="website">
     <meta property="og:image" content="assets/images/logo.png">
     <link rel="icon" href="assets/images/favicon.jpg" type="image/jpeg">
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
-    <title>Third Eye Tradezone — Solar Energy Expert</title>
+    <title>Third Eye Solar — Rooftop Solar in Kota</title>
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
 
-    <header class="site-header">
-      <div class="page-width masthead">
-        <img
-          class="brand-logo"
-          src="assets/images/logo.png"
-          alt="Third Eye Solar Energy"
-          width="214"
-          height="117"
-        >
-        <div class="business-names" aria-label="Business names">
-          <h1>Third Eye Tradezone</h1>
-          <p>Third Eye Solar Energy</p>
-        </div>
-        <p class="distributor-line">
-          <span>Authorized Distributor</span> Premier Energies
-        </p>
-        <p class="division">KOTA DIVISION</p>
-      </div>
+    <header class="site-header" id="top">
+      <div class="nav-shell page-width">
+        <a class="brand" href="#top" aria-label="Third Eye Solar home">
+          <img src="assets/images/favicon.jpg" alt="" width="52" height="52">
+          <span class="brand-copy">
+            <strong>Third Eye Solar</strong>
+            <span>Third Eye Tradezone</span>
+          </span>
+        </a>
 
-      <a
-        class="distributor-bar"
-        href="https://premierenergies.com/"
-        target="_blank"
-        rel="noopener noreferrer"
-      >Authorized Distributor Premier Energies</a>
-      <a class="apply-bar" href="tel:+919828275532">Apply Now / Call 9828275532</a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          <span class="sr-only">Toggle navigation</span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </button>
+
+        <nav class="site-nav" id="site-nav" aria-label="Main navigation">
+          <a href="#projects">Projects</a>
+          <a href="#scheme">PM Surya Ghar</a>
+          <a href="#resources">Resources</a>
+          <a href="#contact">Contact</a>
+          <a class="nav-call" href="tel:+919828275532">
+            <span>Call now</span>
+            <strong>+91 98282 75532</strong>
+          </a>
+        </nav>
+      </div>
     </header>
 
     <main id="main-content">
-      <section class="page-width campaign" aria-label="Solar campaign highlights">
-        <div class="campaign-frame">
-          <img
-            id="campaign-image"
-            src="assets/images/hero-namo.png"
-            alt="PM Surya Ghar: Muft Bijli Yojana"
-          >
-          <button class="carousel-button previous" id="campaign-previous" type="button" aria-label="Previous campaign slide">
-            <span aria-hidden="true">&#10094;</span>
-          </button>
-          <button class="carousel-button next" id="campaign-next" type="button" aria-label="Next campaign slide">
-            <span aria-hidden="true">&#10095;</span>
-          </button>
-        </div>
-        <div class="carousel-dots" id="campaign-dots" aria-label="Choose campaign slide"></div>
-      </section>
-
-      <div class="page-width scheme-banner-wrap">
-        <img
-          class="scheme-banner"
-          src="assets/images/pm-surya-ghar-banner.jpg"
-          alt="Home powered by rooftop solar panels"
-          width="800"
-          height="400"
-        >
-      </div>
-
-      <section class="page-width projects" aria-labelledby="projects-title">
-        <h2 id="projects-title">Our Projects</h2>
-        <div class="project-carousel" aria-roledescription="carousel" aria-label="Completed solar projects">
-          <div class="project-image-wrap">
-            <img id="project-image" src="assets/images/projects/project-01.jpg" alt="">
-            <button class="carousel-button previous" id="project-previous" type="button" aria-label="Previous project">
-              <span aria-hidden="true">&#10094;</span>
-            </button>
-            <button class="carousel-button next" id="project-next" type="button" aria-label="Next project">
-              <span aria-hidden="true">&#10095;</span>
-            </button>
-          </div>
-          <div class="project-details" aria-live="polite" aria-atomic="true">
-            <div>
-              <h3 id="project-title"></h3>
-              <p id="project-description"></p>
+      <section class="hero">
+        <div class="page-width hero-grid">
+          <div class="hero-copy">
+            <p class="eyebrow"><span></span> Rooftop solar experts in Kota</p>
+            <h1>Smart solar for a <em>brighter tomorrow.</em></h1>
+            <p class="hero-lead">
+              Professional rooftop solar systems for homes and businesses, with end-to-end support for installation,
+              subsidy, financing, and commissioning.
+            </p>
+            <div class="hero-actions">
+              <a class="button button-primary" href="#apply">Get a solar estimate <span aria-hidden="true">&#8599;</span></a>
+              <a class="button button-secondary" href="tel:+919828275532">Talk to an expert</a>
             </div>
-            <span id="project-counter"></span>
+            <div class="partner-note">
+              <span class="partner-mark" aria-hidden="true">PE</span>
+              <p><strong>Authorized Distributor</strong><br>Premier Energies · Kota Division</p>
+            </div>
+          </div>
+
+          <div class="hero-visual">
+            <div class="hero-image-frame">
+              <img src="assets/images/pm-surya-ghar-banner.jpg" alt="A home powered by rooftop solar panels" width="800" height="400">
+            </div>
+            <div class="hero-badge">
+              <span class="hero-badge-icon" aria-hidden="true">&#9728;</span>
+              <p><strong>Clean energy</strong><br>Built for your roof</p>
+            </div>
+            <div class="hero-location">
+              <span aria-hidden="true">&#9679;</span>
+              Kota, Rajasthan
+            </div>
           </div>
         </div>
-      </section>
 
-      <section class="page-width quick-links" aria-labelledby="quick-links-title">
-        <h2 id="quick-links-title">Quick Link</h2>
-        <nav aria-label="Quick links">
-          <a href="#apply">Apply for Solar Rooftop <span aria-hidden="true">&#10095;</span></a>
-          <a href="https://pmsuryaghar.gov.in/pdf/CFA_structure20240307.pdf" target="_blank" rel="noopener noreferrer">
-            Subsidy Structure <span aria-hidden="true">&#10095;</span>
-          </a>
-          <a href="https://www.facebook.com/thirdeyetradezonesolarenergyexpert" target="_blank" rel="noopener noreferrer">
-            Empanelled Vendor <span aria-hidden="true">&#10095;</span>
-          </a>
-          <a href="mailto:thirdeyetradezone@gmail.com?subject=Apply%20for%20Job">
-            Apply for Job <span aria-hidden="true">&#10095;</span>
-          </a>
-        </nav>
-      </section>
-
-      <section class="page-width scheme-info" aria-labelledby="scheme-title">
-        <h2 id="scheme-title">What is PM Surya Ghar Yojana?</h2>
-        <p>
-          This visionary scheme aims to provide rooftop solar power systems to one crore households across the country,
-          with several states offering subsidies to facilitate its implementation. For those considering the installation
-          of rooftop solar plants, this initiative presents an excellent opportunity not only for adopting sustainable
-          energy but also for realising significant electricity savings at home.
-        </p>
-        <ol>
-          <li>The scheme aims to equip one crore households with rooftop solar panels to provide electricity from solar energy.</li>
-          <li>The Government will provide subsidy via direct beneficiary transfer (DBT) for installing a solar rooftop plant at a residential home.</li>
-          <li>Rooftop photovoltaic panels connect to a building's main power supply, reducing grid electricity consumption and electricity costs.</li>
-        </ol>
-
-        <div class="benefit-grid">
-          <article>
-            <h3>Subsidy for PM Surya Ghar</h3>
-            <ul>
-              <li>Subsidy of Rs. 30,000/- for 1 KW system</li>
-              <li>Subsidy of Rs. 60,000/- for 2 KW system</li>
-              <li>Subsidy of Rs. 78,000/- for 3 KW and higher system</li>
-            </ul>
-          </article>
-          <article>
-            <h3>Concessional Bank Loans <span>(ROI Starting at 7%)</span></h3>
-            <ul>
-              <li>Government banks provide concessional loans for Surya Ghar Yojana, with rates starting at 7%.</li>
-              <li>Loan amount up to Rs. 2 lakh for projects up to 3 KW.</li>
-              <li>Loan amount up to Rs. 6 lakh for projects above 3 KW and up to 10 KW.</li>
-            </ul>
-          </article>
-          <article>
-            <h3>Direct Beneficiary Transfer to consumer account</h3>
-            <ul>
-              <li>As per guidelines, subsidy is transferred to the consumer's account within 30 days of project commissioning by DISCOM.</li>
-            </ul>
-          </article>
+        <div class="page-width proof-strip" aria-label="Business highlights">
+          <div><strong>38+</strong><span>Projects showcased</span></div>
+          <div><strong>₹78,000</strong><span>Subsidy up to 3 kW+</span></div>
+          <div><strong>7% onwards</strong><span>Concessional loan ROI</span></div>
+          <div><strong>2 service areas</strong><span>Kota and Baran</span></div>
         </div>
       </section>
 
-      <section class="contact-section" id="apply" aria-labelledby="apply-title">
-        <div class="page-width contact-grid">
-          <div class="contact-details">
+      <section class="campaign-section section" id="scheme" aria-labelledby="campaign-heading">
+        <div class="page-width">
+          <div class="section-heading split-heading">
             <div>
-              <h2>Contact Us</h2>
-              <p>Rana Rajneesh Singh Sisodia</p>
-              <p><a href="tel:+919828275532">+91-9828275532</a></p>
-              <p><a href="tel:+919414242293">+91-9414242293</a></p>
-              <p><a href="mailto:thirdeyetradezone@gmail.com">thirdeyetradezone@gmail.com</a></p>
+              <p class="eyebrow">Government initiative</p>
+              <h2 id="campaign-heading">Make the most of PM Surya Ghar</h2>
             </div>
+            <p>
+              Move to rooftop solar with guidance on eligibility, subsidy documentation, bank finance, installation,
+              and DISCOM commissioning.
+            </p>
+          </div>
+
+          <div class="campaign-card">
+            <div class="campaign-frame">
+              <img id="campaign-image" src="assets/images/hero-namo.png" alt="PM Surya Ghar: Muft Bijli Yojana">
+              <button class="carousel-button previous" id="campaign-previous" type="button" aria-label="Previous campaign slide">
+                <span aria-hidden="true">&#8592;</span>
+              </button>
+              <button class="carousel-button next" id="campaign-next" type="button" aria-label="Next campaign slide">
+                <span aria-hidden="true">&#8594;</span>
+              </button>
+            </div>
+            <div class="campaign-footer">
+              <div class="carousel-dots" id="campaign-dots" aria-label="Choose campaign slide"></div>
+              <a href="https://pmsuryaghar.gov.in/" target="_blank" rel="noopener noreferrer">
+                Visit the national portal <span aria-hidden="true">&#8599;</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="projects-section section" id="projects" aria-labelledby="projects-title">
+        <div class="page-width">
+          <div class="section-heading split-heading">
+            <div>
+              <p class="eyebrow">Work on the ground</p>
+              <h2 id="projects-title">Solar projects across Rajasthan</h2>
+            </div>
+            <p>Explore residential and commercial systems installed for customers across Kota, Baran, Bundi, and nearby areas.</p>
+          </div>
+
+          <div class="project-carousel" aria-roledescription="carousel" aria-label="Completed solar projects">
+            <div class="project-image-wrap">
+              <img id="project-image" src="assets/images/projects/project-01.jpg" alt="">
+              <button class="carousel-button previous" id="project-previous" type="button" aria-label="Previous project">
+                <span aria-hidden="true">&#8592;</span>
+              </button>
+              <button class="carousel-button next" id="project-next" type="button" aria-label="Next project">
+                <span aria-hidden="true">&#8594;</span>
+              </button>
+            </div>
+            <div class="project-details" aria-live="polite" aria-atomic="true">
+              <div>
+                <p class="project-label">Featured installation</p>
+                <h3 id="project-title"></h3>
+                <p id="project-description"></p>
+              </div>
+              <span class="project-counter" id="project-counter"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="resources-section section" id="resources" aria-labelledby="resources-title">
+        <div class="page-width">
+          <div class="section-heading centered-heading">
+            <p class="eyebrow">Helpful resources</p>
+            <h2 id="resources-title">Everything you need to get started</h2>
+            <p>Quick access to applications, subsidy details, vendor information, and careers.</p>
+          </div>
+
+          <nav class="resource-grid" aria-label="Solar resources">
+            <a href="#apply">
+              <span class="resource-number">01</span>
+              <strong>Apply for rooftop solar</strong>
+              <span class="resource-arrow" aria-hidden="true">&#8599;</span>
+            </a>
+            <a href="https://pmsuryaghar.gov.in/pdf/CFA_structure20240307.pdf" target="_blank" rel="noopener noreferrer">
+              <span class="resource-number">02</span>
+              <strong>Subsidy structure</strong>
+              <span class="resource-arrow" aria-hidden="true">&#8599;</span>
+            </a>
+            <a href="https://www.facebook.com/thirdeyetradezonesolarenergyexpert" target="_blank" rel="noopener noreferrer">
+              <span class="resource-number">03</span>
+              <strong>Empanelled vendor</strong>
+              <span class="resource-arrow" aria-hidden="true">&#8599;</span>
+            </a>
+            <a href="mailto:thirdeyetradezone@gmail.com?subject=Apply%20for%20Job">
+              <span class="resource-number">04</span>
+              <strong>Join our team</strong>
+              <span class="resource-arrow" aria-hidden="true">&#8599;</span>
+            </a>
+          </nav>
+        </div>
+      </section>
+
+      <section class="benefits-section section" aria-labelledby="benefits-title">
+        <div class="page-width">
+          <div class="benefits-intro">
+            <div>
+              <p class="eyebrow">PM Surya Ghar Yojana</p>
+              <h2 id="benefits-title">A simpler path to affordable rooftop solar.</h2>
+            </div>
+            <div>
+              <p>
+                The scheme supports residential households in adopting grid-connected rooftop solar through direct
+                subsidy transfers and accessible bank finance. We help customers navigate the process from survey to commissioning.
+              </p>
+              <ol class="process-list">
+                <li><span>01</span> Site survey and system recommendation</li>
+                <li><span>02</span> Portal application and documentation</li>
+                <li><span>03</span> Installation, inspection, and commissioning</li>
+              </ol>
+            </div>
+          </div>
+
+          <div class="benefit-grid">
+            <article>
+              <span class="benefit-icon" aria-hidden="true">₹</span>
+              <h3>Direct subsidy</h3>
+              <p>Financial support is transferred directly to the eligible consumer's bank account after commissioning.</p>
+              <ul>
+                <li>₹30,000 for 1 kW</li>
+                <li>₹60,000 for 2 kW</li>
+                <li>₹78,000 for 3 kW and above</li>
+              </ul>
+            </article>
+            <article>
+              <span class="benefit-icon" aria-hidden="true">%</span>
+              <h3>Accessible finance</h3>
+              <p>Concessional bank loans make the initial investment easier to manage for residential customers.</p>
+              <ul>
+                <li>Rates starting near 7%</li>
+                <li>Up to ₹2 lakh for projects up to 3 kW</li>
+                <li>Up to ₹6 lakh for projects up to 10 kW</li>
+              </ul>
+            </article>
+            <article>
+              <span class="benefit-icon" aria-hidden="true">&#10003;</span>
+              <h3>End-to-end support</h3>
+              <p>One experienced team coordinates the technical and administrative work throughout your project.</p>
+              <ul>
+                <li>System design and quality installation</li>
+                <li>DISCOM inspection assistance</li>
+                <li>Commissioning and subsidy guidance</li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="contact-section section" id="contact" aria-labelledby="apply-title">
+        <div class="page-width contact-grid" id="apply">
+          <div class="contact-panel">
+            <p class="eyebrow">Let's talk solar</p>
+            <h2>Ready to make your own electricity?</h2>
+            <p class="contact-lead">Share a few details and our team will help you understand the right plant size, subsidy, and next steps.</p>
+
+            <div class="contact-list">
+              <a href="tel:+919828275532">
+                <span>Primary phone</span>
+                <strong>+91 98282 75532</strong>
+              </a>
+              <a href="tel:+919414242293">
+                <span>Alternate phone</span>
+                <strong>+91 94142 42293</strong>
+              </a>
+              <a href="mailto:thirdeyetradezone@gmail.com">
+                <span>Email</span>
+                <strong>thirdeyetradezone@gmail.com</strong>
+              </a>
+            </div>
+
             <address>
-              <strong>Head Office:</strong><br>
-              Third Eye Tradezone<br>
+              <span>Head office</span>
+              <strong>Third Eye Tradezone</strong><br>
               58, Mamta Bhawan, Shiv Nagar,<br>
               Police Line, Baran Road,<br>
               Kota 324001, Rajasthan
@@ -177,79 +281,97 @@
           </div>
 
           <form class="solar-form" id="solar-form">
-            <h2 id="apply-title">Apply for Solar</h2>
+            <div class="form-heading">
+              <p class="eyebrow">Free consultation</p>
+              <h2 id="apply-title">Apply for solar</h2>
+              <p>We'll open WhatsApp with your details so you can contact our team directly.</p>
+            </div>
+
+            <label>
+              <span>Your name</span>
+              <input name="name" autocomplete="name" placeholder="Full name" required>
+            </label>
+            <label>
+              <span>Phone number</span>
+              <span class="phone-input">
+                <span class="phone-prefix" aria-hidden="true">+91</span>
+                <input
+                  name="phone"
+                  type="tel"
+                  inputmode="numeric"
+                  autocomplete="tel-national"
+                  pattern="[6-9][0-9]{4} [0-9]{5}"
+                  minlength="11"
+                  maxlength="11"
+                  placeholder="00000 00000"
+                  title="Enter a 10-digit Indian mobile number beginning with 6, 7, 8, or 9"
+                  aria-label="Indian mobile number after country code plus 91"
+                  required
+                >
+              </span>
+            </label>
             <div class="form-row">
               <label>
-                <span>Name</span>
-                <input name="name" autocomplete="name" required>
-              </label>
-              <label>
-                <span>Phone Number</span>
-                <span class="phone-input">
-                  <span class="phone-prefix" aria-hidden="true">+91</span>
-                  <input
-                    name="phone"
-                    type="tel"
-                    inputmode="numeric"
-                    autocomplete="tel-national"
-                    pattern="[6-9][0-9]{4} [0-9]{5}"
-                    minlength="11"
-                    maxlength="11"
-                    placeholder="00000 00000"
-                    title="Enter a 10-digit Indian mobile number beginning with 6, 7, 8, or 9"
-                    aria-label="Indian mobile number after country code plus 91"
-                    required
-                  >
+                <span>Plant capacity</span>
+                <span class="input-suffix">
+                  <input name="capacity" type="number" inputmode="decimal" min="0.1" step="0.1" placeholder="5">
+                  <span>kW</span>
                 </span>
               </label>
+              <label>
+                <span>House address</span>
+                <input name="address" autocomplete="street-address" placeholder="Area, city">
+              </label>
             </div>
-            <label>
-              <span>Solar Plant Capacity (kW)</span>
-              <input name="capacity" type="number" inputmode="decimal" min="0.1" step="0.1" placeholder="e.g. 5">
-            </label>
-            <label>
-              <span>House Address</span>
-              <textarea name="address" rows="3"></textarea>
-            </label>
-            <button type="submit">Submit</button>
-            <p class="form-note">Submitting opens WhatsApp with your application details.</p>
+            <button class="button button-primary form-submit" type="submit">Send via WhatsApp <span aria-hidden="true">&#8599;</span></button>
             <p class="form-status" id="form-status" aria-live="polite"></p>
           </form>
+        </div>
+      </section>
+
+      <section class="map-section" aria-labelledby="map-title">
+        <div class="page-width">
+          <div class="map-heading">
+            <div>
+              <p class="eyebrow">Visit our head office</p>
+              <h2 id="map-title">Find us in Kota</h2>
+            </div>
+            <a href="https://www.google.com/maps/search/?api=1&amp;query=Third%20Eye%20Tradezone%20Solar%20Energy%20Expert" target="_blank" rel="noopener noreferrer">
+              Open in Google Maps <span aria-hidden="true">&#8599;</span>
+            </a>
+          </div>
+          <div class="map-frame">
+            <iframe
+              title="Google Map showing the Third Eye Tradezone head office"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d303883.8257160266!2d75.56673659453126!3d25.18632510000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396f9ac14563e15b%3A0x73aff1cf0933f23e!2sThird%20Eye%20Tradezone%20-Solar%20Energy%20Expert!5e1!3m2!1sen!2sus!4v1786040314543!5m2!1sen!2sus"
+              width="600"
+              height="450"
+              style="border: 0"
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              allowfullscreen
+            ></iframe>
+          </div>
         </div>
       </section>
     </main>
 
     <footer class="site-footer">
-      <div class="map-section">
-        <div class="page-width">
-          <div class="map-heading">
-            <div>
-              <p class="eyebrow">Head Office</p>
-              <h2>Find us in Kota</h2>
-            </div>
-            <a
-              href="https://www.google.com/maps/search/?api=1&amp;query=58%2C%20Mamta%20Bhawan%2C%20Shiv%20Nagar%2C%20Police%20Line%2C%20Baran%20Road%2C%20Kota%20324001%2C%20Rajasthan"
-              target="_blank"
-              rel="noopener noreferrer"
-            >Open in Google Maps</a>
-          </div>
-          <iframe
-            title="Google Map showing the Third Eye Tradezone head office"
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d303883.8257160266!2d75.56673659453126!3d25.18632510000001!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x396f9ac14563e15b%3A0x73aff1cf0933f23e!2sThird%20Eye%20Tradezone%20-Solar%20Energy%20Expert!5e1!3m2!1sen!2sus!4v1786040314543!5m2!1sen!2sus"
-            width="600"
-            height="450"
-            style="border: 0"
-            loading="lazy"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
-          ></iframe>
+      <div class="page-width footer-grid">
+        <div class="footer-brand">
+          <img src="assets/images/favicon.jpg" alt="" width="44" height="44">
+          <div><strong>Third Eye Solar</strong><span>Clean energy for Kota</span></div>
+        </div>
+        <div class="footer-meta">
+          <p>Third Eye Tradezone · GST No. 08AMGPR6333R1Z8</p>
+          <p>&copy; <span id="copyright-year">2024</span> All rights reserved.</p>
         </div>
       </div>
-      <div class="footer-legal">
-        <p>Copyright &copy; <span id="copyright-year">2024</span></p>
-        <p>Third Eye Tradezone</p>
-        <p>GST No. 08AMGPR6333R1Z8</p>
-      </div>
     </footer>
+
+    <a class="mobile-call" href="tel:+919828275532" aria-label="Call Third Eye Solar at 98282 75532">
+      <span>Call a solar expert</span>
+      <strong>98282 75532</strong>
+    </a>
   </body>
 </html>

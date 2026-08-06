@@ -58,6 +58,28 @@ const projects = [
   description,
 }));
 
+const navToggle = document.querySelector(".nav-toggle");
+const siteNav = document.querySelector("#site-nav");
+
+function closeNavigation() {
+  navToggle.setAttribute("aria-expanded", "false");
+  siteNav.dataset.open = "false";
+  document.body.classList.remove("nav-open");
+}
+
+navToggle.addEventListener("click", () => {
+  const willOpen = navToggle.getAttribute("aria-expanded") !== "true";
+  navToggle.setAttribute("aria-expanded", String(willOpen));
+  siteNav.dataset.open = String(willOpen);
+  document.body.classList.toggle("nav-open", willOpen);
+});
+
+siteNav.querySelectorAll("a").forEach((link) => link.addEventListener("click", closeNavigation));
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth > 820) closeNavigation();
+});
+
 const campaignImage = document.querySelector("#campaign-image");
 const campaignDots = document.querySelector("#campaign-dots");
 const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
