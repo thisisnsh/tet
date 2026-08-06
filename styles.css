@@ -1,0 +1,604 @@
+:root {
+  --blue: #075b99;
+  --dark-blue: #063e65;
+  --green: #17ad20;
+  --orange: #f28713;
+  --red: #ff3e41;
+  --ink: #082f4a;
+  --white: #fff;
+  --page-width: 980px;
+  --shadow: 0 18px 45px rgb(3 46 76 / 14%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--white);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.5;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+}
+
+.page-width {
+  width: min(calc(100% - 32px), var(--page-width));
+  margin-inline: auto;
+}
+
+.skip-link {
+  position: fixed;
+  z-index: 100;
+  top: 8px;
+  left: 8px;
+  padding: 10px 14px;
+  color: var(--white);
+  background: #000;
+  transform: translateY(-150%);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+.masthead {
+  padding-top: 0;
+  text-align: center;
+}
+
+.brand-logo {
+  width: 214px;
+  height: 147px;
+  margin-inline: auto;
+  object-fit: cover;
+}
+
+.business-names {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: clamp(28px, 6vw, 60px);
+  margin-top: 4px;
+}
+
+.business-names h1,
+.business-names p {
+  margin: 0;
+  font-size: clamp(1.7rem, 4.2vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.business-names h1 {
+  color: var(--red);
+}
+
+.business-names p {
+  color: var(--orange);
+}
+
+.distributor-line {
+  margin: 12px 0 0;
+  color: var(--blue);
+  font-size: clamp(1.45rem, 3.8vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.distributor-line span {
+  color: var(--green);
+}
+
+.division {
+  margin: 10px 0 8px;
+  color: var(--red);
+  font-size: clamp(1.6rem, 4vw, 2.75rem);
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.distributor-bar,
+.apply-bar {
+  display: block;
+  width: 100%;
+  color: var(--white);
+  text-align: center;
+  text-decoration: underline;
+}
+
+.distributor-bar {
+  padding: 5px 16px;
+  background: var(--blue);
+  font-size: 1.1rem;
+}
+
+.apply-bar {
+  margin-top: 15px;
+  padding: 6px 16px 8px;
+  background: var(--green);
+  font-size: clamp(1.45rem, 3.6vw, 2.25rem);
+  font-weight: 700;
+}
+
+.campaign {
+  padding-top: 28px;
+}
+
+.campaign-frame,
+.project-image-wrap {
+  position: relative;
+  overflow: hidden;
+  background: #f4f7f8;
+}
+
+.campaign-frame {
+  display: grid;
+  min-height: 256px;
+  place-items: center;
+}
+
+.campaign-frame img {
+  width: 100%;
+  height: auto;
+  max-height: 318px;
+  object-fit: contain;
+}
+
+.carousel-button {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  display: grid;
+  width: 44px;
+  height: 52px;
+  padding: 0;
+  border: 0;
+  color: var(--blue);
+  background: rgb(255 255 255 / 90%);
+  box-shadow: 0 2px 14px rgb(0 0 0 / 14%);
+  cursor: pointer;
+  transform: translateY(-50%);
+  place-items: center;
+}
+
+.carousel-button:hover,
+.carousel-button:focus-visible {
+  color: var(--white);
+  background: var(--blue);
+}
+
+.carousel-button.previous {
+  left: 0;
+}
+
+.carousel-button.next {
+  right: 0;
+}
+
+.carousel-dots {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  min-height: 16px;
+  margin-top: 10px;
+}
+
+.carousel-dots button {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: 1px solid var(--blue);
+  border-radius: 50%;
+  background: transparent;
+  cursor: pointer;
+}
+
+.carousel-dots button[aria-current="true"] {
+  background: var(--blue);
+}
+
+.scheme-banner-wrap {
+  display: flex;
+  justify-content: center;
+  padding-top: 22px;
+}
+
+.scheme-banner {
+  width: 100%;
+  height: min(400px, 45vw);
+  min-height: 230px;
+  object-fit: cover;
+}
+
+.projects {
+  padding-top: 17px;
+}
+
+.projects > h2,
+.quick-links > h2 {
+  margin: 0 0 14px;
+  color: var(--orange);
+  font-size: 1.55rem;
+  text-align: center;
+}
+
+.project-carousel {
+  border: 5px solid var(--white);
+  box-shadow: var(--shadow);
+}
+
+.project-image-wrap {
+  height: clamp(290px, 48vw, 465px);
+}
+
+.project-image-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-details {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 20px;
+  min-height: 74px;
+  padding: 11px 9px 8px;
+  color: var(--blue);
+}
+
+.project-details h3,
+.project-details p {
+  margin: 0;
+}
+
+.project-details h3 {
+  font-size: 0.9rem;
+}
+
+.project-details p,
+.project-details span {
+  font-size: 0.8rem;
+}
+
+.project-details span {
+  flex: none;
+}
+
+.quick-links {
+  padding-block: 30px 42px;
+}
+
+.quick-links nav {
+  display: grid;
+  width: min(100%, 290px);
+  gap: 8px;
+  margin-inline: auto;
+}
+
+.quick-links a {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 44px;
+  padding: 9px 18px;
+  border-radius: 5px;
+  color: var(--white);
+  background: var(--blue);
+  font-size: 1rem;
+  letter-spacing: 0.07em;
+  text-decoration: none;
+  transition: background 160ms ease, transform 160ms ease;
+}
+
+.quick-links a:hover,
+.quick-links a:focus-visible {
+  background: var(--dark-blue);
+  transform: translateX(3px);
+}
+
+.scheme-info {
+  padding-bottom: 46px;
+}
+
+.scheme-info h2 {
+  margin: 0 0 8px;
+  color: var(--blue);
+  font-size: clamp(1.55rem, 3vw, 2rem);
+}
+
+.scheme-info p,
+.scheme-info ol,
+.scheme-info ul {
+  margin-top: 0;
+}
+
+.scheme-info ol,
+.scheme-info ul {
+  padding-left: 1.3rem;
+}
+
+.benefit-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px 28px;
+  margin-top: 28px;
+}
+
+.benefit-grid article {
+  padding: 20px;
+  border-top: 4px solid var(--green);
+  background: #f1f7fa;
+}
+
+.benefit-grid article:last-child {
+  grid-column: 1 / -1;
+}
+
+.benefit-grid h3 {
+  margin: 0 0 8px;
+  color: var(--blue);
+  font-size: 1.05rem;
+}
+
+.benefit-grid h3 span {
+  white-space: nowrap;
+}
+
+.benefit-grid li + li {
+  margin-top: 5px;
+}
+
+.contact-section {
+  color: var(--white);
+  background: var(--dark-blue);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(340px, 1.15fr);
+  align-items: stretch;
+}
+
+.contact-details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 38px;
+  padding: 38px 36px 40px 0;
+}
+
+.contact-details h2,
+.contact-details p {
+  margin-top: 0;
+}
+
+.contact-details h2 {
+  margin-bottom: 16px;
+}
+
+.contact-details p {
+  margin-bottom: 4px;
+}
+
+.contact-details address {
+  font-style: normal;
+}
+
+.contact-details a:hover,
+.contact-details a:focus-visible {
+  color: #9fe6ff;
+}
+
+.solar-form {
+  display: grid;
+  gap: 22px;
+  padding: 38px 42px 36px;
+  color: #111;
+  background: var(--white);
+}
+
+.solar-form h2 {
+  margin: 0 0 4px;
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.solar-form label,
+.solar-form label span {
+  display: block;
+}
+
+.solar-form label span {
+  margin-bottom: 6px;
+  font-size: 0.8rem;
+}
+
+.solar-form input,
+.solar-form textarea {
+  width: 100%;
+  padding: 8px 2px;
+  border: 0;
+  border-bottom: 1px solid #111;
+  border-radius: 0;
+  outline: 0;
+  resize: vertical;
+}
+
+.solar-form input:focus,
+.solar-form textarea:focus {
+  border-bottom-color: var(--blue);
+  box-shadow: 0 2px 0 var(--blue);
+}
+
+.solar-form button {
+  width: 110px;
+  min-height: 36px;
+  border: 0;
+  border-radius: 999px;
+  color: var(--white);
+  background: #000;
+  cursor: pointer;
+}
+
+.solar-form button:hover,
+.solar-form button:focus-visible {
+  background: var(--blue);
+}
+
+.form-note,
+.form-status {
+  margin: -10px 0 0;
+  font-size: 0.75rem;
+}
+
+.form-note {
+  color: #555;
+}
+
+.form-status {
+  min-height: 1.2em;
+  color: var(--blue);
+}
+
+.site-footer {
+  padding: 22px 16px;
+  color: var(--white);
+  background: var(--blue);
+  text-align: center;
+}
+
+.site-footer p {
+  margin: 0;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 700px) {
+  .brand-logo {
+    width: 170px;
+    height: 117px;
+  }
+
+  .business-names {
+    display: block;
+  }
+
+  .business-names p {
+    margin-top: 5px;
+  }
+
+  .campaign-frame {
+    min-height: 160px;
+  }
+
+  .carousel-button {
+    width: 38px;
+    height: 44px;
+  }
+
+  .project-image-wrap {
+    height: 64vw;
+    min-height: 260px;
+  }
+
+  .benefit-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .benefit-grid article:last-child {
+    grid-column: auto;
+  }
+
+  .contact-details {
+    padding-right: 0;
+  }
+
+  .solar-form {
+    margin-inline: -16px;
+    padding-inline: 24px;
+  }
+}
+
+@media (max-width: 470px) {
+  .page-width {
+    width: min(calc(100% - 24px), var(--page-width));
+  }
+
+  .distributor-line span {
+    display: block;
+  }
+
+  .campaign {
+    width: 100%;
+    padding-top: 18px;
+  }
+
+  .campaign-frame img {
+    min-height: 155px;
+    object-fit: contain;
+  }
+
+  .scheme-banner-wrap {
+    width: 100%;
+  }
+
+  .scheme-banner {
+    min-height: 250px;
+  }
+
+  .projects {
+    width: 100%;
+  }
+
+  .project-carousel {
+    border-inline: 0;
+  }
+
+  .project-details {
+    padding-inline: 12px;
+  }
+
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+  }
+}
