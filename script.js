@@ -1,62 +1,115 @@
 const campaigns = [
   {
-    image: "assets/images/hero-namo.png",
+    image: "assets/images/hero-namo-hd.png",
     alt: "PM Surya Ghar: Muft Bijli Yojana",
   },
   {
-    image: "assets/images/hero-namo-again.jpg",
+    image: "assets/images/hero-namo-again-hd.jpg",
     alt: "Namo Again 2029 solar campaign",
   },
   {
-    image: "assets/images/hero-pm-surya-ghar.png",
+    image: "assets/images/hero-pm-surya-ghar-hd.png",
     alt: "PM Surya Ghar solar campaign",
   },
 ];
 
-const projects = [
-  ["project-01.jpg", "Shri Bishan Chand Sharma", "Happy Consumer Kota"],
-  ["project-02.jpg", "5 kw Shiv Nagar Police line", "Project Under PM Surya Ghar"],
-  ["project-03.jpg", "5 Kw Shagaun Villa Kota", "Project Under PM Surya Ghar"],
-  ["project-04.jpeg", "5 KW Behind Holy family Hospital Borkheda", "Project Under PM Surya Ghar"],
-  ["project-05.jpeg", "5 KW Shagun Villa Kota", "Project Under PM Surya Ghar Scheme"],
-  ["project-06.jpg", "6 KW Gopal Vihar Kota", "Project Under PM Surya Ghar Scheme"],
-  ["project-07.jpg", "5 Kw Roteda Road Railway Station Kota", "Project Under PM Surya Ghar Scheme"],
-  ["project-08.jpeg", "5 KW", "Project Under PM Surya Ghar Scheme"],
-  ["project-09.jpeg", "5 KW", "Project Under PM Surya Ghar Scheme"],
-  ["project-10.jpg", "5 Kw Babu Lal Sahu Vigyan Nagar Kota", "Project Under PM Surya Ghar Scheme"],
-  ["project-11.jpg", "5 KW Nomana Khan Borkehda", "Project Under PM Surya Ghar Scheme"],
-  ["project-12.jpeg", "5 KW Pramod Sharma Baran", "Project Under PM Surya Ghar Scheme"],
-  ["project-13.jpeg", "3.5 Kw Purushottam Nama Baran Raj", "Project Under PM Surya Ghar Scheme"],
-  ["project-14.jpeg", "5 KW Shagun Villa Kota", "Under PM Surya Ghar Scheme"],
-  ["project-15.jpg", "5KW under PM Surya Ghar Yojana", "Thegda Road, Kota"],
-  ["project-16.jpg", "3KW under PM Surya Ghar Yojana", "Ajay Ahuja Nagar, Kota"],
-  ["project-17.jpg", "5KW under PM Surya Ghar Yojana", "Vasant Vihar, Kota"],
-  ["project-18.jpg", "5 KW PM Surya Ghar Scheme", "Lokesh Kumar Meena, Silicon City, Khunadi, Kota Raj."],
-  ["project-19.jpg", "5 KW PM Surya Ghar Scheme", "BC Meena, Parshavnath City, Khunadi, Kota Raj."],
-  ["project-20.jpeg", "5 KW PM Surya Ghar Scheme", "Om Prakash Khatri, Borkheda New Pragati School, Kota Raj."],
-  ["project-21.jpg", "5 KW PM Surya Ghar Scheme", "Rajeev Choudhary, Parshavnath City, Khunadi, Kota Raj."],
-  ["project-22.jpg", "6 KW PM Surya Ghar Scheme", "Nand Kishore, Shri Ram Colony, Borkheda, Kota Rajasthan"],
-  ["project-23.jpg", "8 KW PM Surya Ghar Scheme", "Subash Chand Meena, Vaishali Nagar Sogaria, Kota Rajasthan"],
-  ["project-24.jpg", "5 kw PM Surya Ghar Scheme", "Sumit Hawa, New Colony Bundi Rajasthan"],
-  ["project-25.jpg", "5 KW PM Surya Ghar", "Sukhwant Singh, Ranjeet Colony Station, Kota Raj."],
-  ["project-26.jpg", "10KW Solar Power Plant", "Borkheda, Kota"],
-  ["project-27.jpg", "10KW Industrial Solar Power Plant", "Prem Nagar, Kota"],
-  ["project-28.jpg", "15KW Solar Plant", "Landmark, Near Allen Sankalp, Kota"],
-  ["project-29.jpg", "30 KW Baran Rajasthan", ""],
-  ["project-30.jpg", "5KW Under PM Surya Ghar Scheme, Kota", ""],
-  ["project-31.jpg", "5 KW Under PM Surya Ghar Scheme", ""],
-  ["project-32.jpg", "15 KW BPCL PETROL PUMP KOTA", ""],
-  ["project-33.jpg", "5KW On-Grid Under PM Surya Ghar, Khunadi Kota", "Adani Bifacial 535 Watt panel"],
-  ["project-34.jpg", "5 KW Installation", ""],
-  ["project-35.jpg", "8KW", ""],
-  ["project-36.jpg", "Bifacial Modules", ""],
-  ["project-37.jpg", "Structure Pre GI as per MNRE guidelines", ""],
-  ["project-38.jpg", "8KW Gopal Vihar Kota Rajasthan", ""],
-].map(([file, title, description]) => ({
-  image: `assets/images/projects/${file}`,
-  title,
-  description,
+const projects = window.PROJECTS_CONFIG.map((project) => ({
+  ...project,
+  image: `assets/images/projects/${project.image}`,
 }));
+
+const hindiTranslations = new Map([
+  ["Projects", "परियोजनाएँ"],
+  ["PM Surya Ghar", "पीएम सूर्य घर"],
+  ["Resources", "संसाधन"],
+  ["Contact", "संपर्क"],
+  ["Call now", "अभी कॉल करें"],
+  ["Rooftop solar experts in Kota", "कोटा में रूफटॉप सोलर विशेषज्ञ"],
+  ["Smart solar for a", "स्मार्ट सोलर से"],
+  ["brighter tomorrow.", "उज्ज्वल कल बनाएँ।"],
+  ["Professional rooftop solar systems for homes and businesses, with end-to-end support for installation, subsidy, financing, and commissioning.", "घरों और व्यवसायों के लिए पेशेवर रूफटॉप सोलर सिस्टम—इंस्टॉलेशन, सब्सिडी, फाइनेंस और कमीशनिंग की पूरी सहायता के साथ।"],
+  ["Get a solar estimate", "सोलर अनुमान पाएँ"],
+  ["Talk to an expert", "विशेषज्ञ से बात करें"],
+  ["Clean energy", "स्वच्छ ऊर्जा"],
+  ["Built for your roof", "आपकी छत के लिए तैयार"],
+  ["Authorized Distributor", "अधिकृत वितरक"],
+  ["Kota Division", "कोटा डिवीजन"],
+  ["Projects completed", "परियोजनाएँ पूरी कीं"],
+  ["Subsidy up to 3 kW+", "3 kW+ पर अधिकतम सब्सिडी"],
+  ["Concessional loan ROI", "रियायती ऋण ब्याज दर"],
+  ["2 service areas", "2 सेवा क्षेत्र"],
+  ["Kota and Baran", "कोटा और बारां"],
+  ["Government initiative", "सरकारी पहल"],
+  ["Make the most of PM Surya Ghar: Muft Bijli Yojna", "पीएम सूर्य घर: मुफ्त बिजली योजना का पूरा लाभ उठाएँ"],
+  ["Move to rooftop solar with guidance on eligibility, subsidy documentation, bank finance, installation, and DISCOM commissioning.", "पात्रता, सब्सिडी दस्तावेज़, बैंक फाइनेंस, इंस्टॉलेशन और डिस्कॉम कमीशनिंग के मार्गदर्शन के साथ रूफटॉप सोलर अपनाएँ।"],
+  ["Visit the national portal", "राष्ट्रीय पोर्टल देखें"],
+  ["PM Surya Ghar Yojana", "पीएम सूर्य घर योजना"],
+  ["A simpler path to affordable rooftop solar.", "किफायती रूफटॉप सोलर का आसान रास्ता।"],
+  ["The scheme supports residential households in adopting grid-connected rooftop solar through direct subsidy transfers and accessible bank finance. We help customers navigate the process from survey to commissioning.", "यह योजना सीधे सब्सिडी हस्तांतरण और सुलभ बैंक फाइनेंस के माध्यम से घरों को ग्रिड-कनेक्टेड रूफटॉप सोलर अपनाने में मदद करती है। हम सर्वे से कमीशनिंग तक पूरी प्रक्रिया में सहायता करते हैं।"],
+  ["Site survey and system recommendation", "साइट सर्वे और सिस्टम सुझाव"],
+  ["Portal application and documentation", "पोर्टल आवेदन और दस्तावेज़"],
+  ["Installation, inspection, and commissioning", "इंस्टॉलेशन, निरीक्षण और कमीशनिंग"],
+  ["Direct subsidy", "सीधी सब्सिडी"],
+  ["Financial support is transferred directly to the eligible consumer's bank account after commissioning.", "कमीशनिंग के बाद वित्तीय सहायता सीधे पात्र उपभोक्ता के बैंक खाते में भेजी जाती है।"],
+  ["₹30,000 for 1 kW", "1 kW के लिए ₹30,000"],
+  ["₹60,000 for 2 kW", "2 kW के लिए ₹60,000"],
+  ["₹78,000 for 3 kW and above", "3 kW और अधिक के लिए ₹78,000"],
+  ["Accessible finance", "सुलभ फाइनेंस"],
+  ["Concessional bank loans make the initial investment easier to manage for residential customers.", "रियायती बैंक ऋण घरेलू ग्राहकों के लिए शुरुआती निवेश को आसान बनाते हैं।"],
+  ["Rates starting near 7%", "ब्याज दर लगभग 7% से शुरू"],
+  ["Up to ₹2 lakh for projects up to 3 kW", "3 kW तक की परियोजना के लिए ₹2 लाख तक"],
+  ["Up to ₹6 lakh for projects up to 10 kW", "10 kW तक की परियोजना के लिए ₹6 लाख तक"],
+  ["End-to-end support", "शुरू से अंत तक सहायता"],
+  ["One experienced team coordinates the technical and administrative work throughout your project.", "एक अनुभवी टीम आपकी पूरी परियोजना के तकनीकी और प्रशासनिक काम का समन्वय करती है।"],
+  ["System design and quality installation", "सिस्टम डिज़ाइन और गुणवत्तापूर्ण इंस्टॉलेशन"],
+  ["DISCOM inspection assistance", "डिस्कॉम निरीक्षण में सहायता"],
+  ["Commissioning and subsidy guidance", "कमीशनिंग और सब्सिडी मार्गदर्शन"],
+  ["Work on the ground", "हमारा काम"],
+  ["Solar projects across Rajasthan", "राजस्थान भर में सोलर परियोजनाएँ"],
+  ["Explore residential and commercial systems installed for customers across Kota, Baran, Bundi, and nearby areas.", "कोटा, बारां, बूंदी और आसपास के क्षेत्रों में लगाए गए घरेलू और व्यावसायिक सिस्टम देखें।"],
+  ["Featured installation", "प्रमुख इंस्टॉलेशन"],
+  ["Project Under PM Surya Ghar", "पीएम सूर्य घर के अंतर्गत परियोजना"],
+  ["Project Under PM Surya Ghar Scheme", "पीएम सूर्य घर योजना के अंतर्गत परियोजना"],
+  ["Under PM Surya Ghar Scheme", "पीएम सूर्य घर योजना के अंतर्गत"],
+  ["Helpful resources", "उपयोगी संसाधन"],
+  ["Everything you need to get started", "शुरुआत के लिए आपकी हर ज़रूरत"],
+  ["Quick access to applications, subsidy details, vendor information, and careers.", "आवेदन, सब्सिडी विवरण, विक्रेता जानकारी और करियर तक त्वरित पहुँच।"],
+  ["Apply for rooftop solar", "रूफटॉप सोलर के लिए आवेदन करें"],
+  ["Subsidy structure", "सब्सिडी संरचना"],
+  ["Empanelled vendor", "सूचीबद्ध विक्रेता"],
+  ["Join our team", "हमारी टीम से जुड़ें"],
+  ["Let's talk solar", "आइए सोलर पर बात करें"],
+  ["Ready to make your own electricity?", "अपनी बिजली खुद बनाने के लिए तैयार हैं?"],
+  ["Share a few details and our team will help you understand the right plant size, subsidy, and next steps.", "कुछ जानकारी साझा करें और हमारी टीम सही प्लांट क्षमता, सब्सिडी और अगले कदम समझने में आपकी मदद करेगी।"],
+  ["Primary phone", "मुख्य फोन"],
+  ["Alternate phone", "वैकल्पिक फोन"],
+  ["Email", "ईमेल"],
+  ["Head office", "मुख्य कार्यालय"],
+  ["Free consultation", "निःशुल्क परामर्श"],
+  ["Apply for solar", "सोलर के लिए आवेदन करें"],
+  ["We'll open WhatsApp with your details so you can contact our team directly.", "आपकी जानकारी के साथ WhatsApp खुलेगा ताकि आप हमारी टीम से सीधे संपर्क कर सकें।"],
+  ["Your name", "आपका नाम"],
+  ["Phone number", "फोन नंबर"],
+  ["Plant capacity", "प्लांट क्षमता"],
+  ["House address", "घर का पता"],
+  ["Send via WhatsApp", "WhatsApp से भेजें"],
+  ["Visit our head office", "हमारे मुख्य कार्यालय आएँ"],
+  ["Find us in Kota", "कोटा में हमें खोजें"],
+  ["Open in Google Maps", "Google Maps में खोलें"],
+  ["Clean energy for Kota", "कोटा के लिए स्वच्छ ऊर्जा"],
+  ["All rights reserved.", "सर्वाधिकार सुरक्षित।"],
+  ["Call a solar expert", "सोलर विशेषज्ञ को कॉल करें"],
+  ["Full name", "पूरा नाम"],
+  ["Area, city", "क्षेत्र, शहर"],
+  ["Opening WhatsApp…", "WhatsApp खुल रहा है…"],
+]);
+
+const normalizeText = (value) => value.trim().replace(/\s+/g, " ");
+const translateText = (value) => {
+  if (currentLanguage !== "hi") return value;
+  return hindiTranslations.get(normalizeText(value)) || value;
+};
+let currentLanguage = "en";
 
 const navToggle = document.querySelector(".nav-toggle");
 const siteNav = document.querySelector("#site-nav");
@@ -140,8 +193,8 @@ function renderProject() {
   const project = projects[projectIndex];
   projectImage.src = project.image;
   projectImage.alt = project.description ? `${project.title}. ${project.description}` : project.title;
-  projectTitle.textContent = project.title;
-  projectDescription.textContent = project.description;
+  projectTitle.textContent = translateText(project.title);
+  projectDescription.textContent = translateText(project.description);
   projectCounter.textContent = `${projectIndex + 1}/${projects.length}`;
 }
 
@@ -179,16 +232,25 @@ document.querySelector("#solar-form").addEventListener("submit", (event) => {
   event.preventDefault();
   const form = event.currentTarget;
   const data = new FormData(form);
-  const message = [
-    "Hello Third Eye Tradezone, I would like to apply for rooftop solar.",
-    "",
-    `Name: ${data.get("name")}`,
-    `Phone: +91 ${data.get("phone")}`,
-    `Solar Plant Capacity: ${data.get("capacity") || "Not specified"} kW`,
-    `House Address: ${data.get("address") || "Not specified"}`,
-  ].join("\n");
+  const message = currentLanguage === "hi"
+    ? [
+        "नमस्ते Third Eye Tradezone, मैं रूफटॉप सोलर के लिए आवेदन करना चाहता/चाहती हूँ।",
+        "",
+        `नाम: ${data.get("name")}`,
+        `फोन: +91 ${data.get("phone")}`,
+        `सोलर प्लांट क्षमता: ${data.get("capacity") || "नहीं बताया"} kW`,
+        `घर का पता: ${data.get("address") || "नहीं बताया"}`,
+      ].join("\n")
+    : [
+        "Hello Third Eye Tradezone, I would like to apply for rooftop solar.",
+        "",
+        `Name: ${data.get("name")}`,
+        `Phone: +91 ${data.get("phone")}`,
+        `Solar Plant Capacity: ${data.get("capacity") || "Not specified"} kW`,
+        `House Address: ${data.get("address") || "Not specified"}`,
+      ].join("\n");
 
-  document.querySelector("#form-status").textContent = "Opening WhatsApp…";
+  document.querySelector("#form-status").textContent = translateText("Opening WhatsApp…");
   window.open(`https://wa.me/919828275532?text=${encodeURIComponent(message)}`, "_blank", "noopener,noreferrer");
 });
 
@@ -197,3 +259,55 @@ document.querySelector("#copyright-year").textContent = new Date().getFullYear()
 renderCampaign();
 restartCampaignTimer();
 renderProject();
+
+const translationNodes = [];
+const textWalker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT, {
+  acceptNode(node) {
+    const parent = node.parentElement;
+    if (!parent || parent.closest("script, style, [data-no-translate]")) return NodeFilter.FILTER_REJECT;
+    return hindiTranslations.has(normalizeText(node.nodeValue))
+      ? NodeFilter.FILTER_ACCEPT
+      : NodeFilter.FILTER_REJECT;
+  },
+});
+
+while (textWalker.nextNode()) {
+  const node = textWalker.currentNode;
+  translationNodes.push({ node, english: normalizeText(node.nodeValue) });
+}
+
+const translatedAttributes = [];
+document.querySelectorAll("[placeholder], [title], [aria-label]").forEach((element) => {
+  ["placeholder", "title", "aria-label"].forEach((attribute) => {
+    const english = element.getAttribute(attribute);
+    if (english && hindiTranslations.has(normalizeText(english))) {
+      translatedAttributes.push({ element, attribute, english });
+    }
+  });
+});
+
+function applyLanguage(language, persist = true) {
+  currentLanguage = language === "hi" ? "hi" : "en";
+  document.documentElement.lang = currentLanguage;
+
+  translationNodes.forEach(({ node, english }) => {
+    node.nodeValue = currentLanguage === "hi" ? hindiTranslations.get(english) : english;
+  });
+
+  translatedAttributes.forEach(({ element, attribute, english }) => {
+    element.setAttribute(attribute, currentLanguage === "hi" ? hindiTranslations.get(normalizeText(english)) : english);
+  });
+
+  document.querySelectorAll("[data-language]").forEach((button) => {
+    button.setAttribute("aria-pressed", String(button.dataset.language === currentLanguage));
+  });
+
+  renderProject();
+  if (persist) localStorage.setItem("site-language", currentLanguage);
+}
+
+document.querySelectorAll("[data-language]").forEach((button) => {
+  button.addEventListener("click", () => applyLanguage(button.dataset.language));
+});
+
+applyLanguage(localStorage.getItem("site-language") === "hi" ? "hi" : "en", false);

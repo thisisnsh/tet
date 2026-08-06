@@ -42,6 +42,17 @@ body.nav-open {
   overflow: hidden;
 }
 
+html[lang="hi"] body {
+  font-family: "Noto Sans Devanagari", "Kohinoor Devanagari", Mangal, ui-sans-serif, system-ui, sans-serif;
+}
+
+html[lang="hi"] h1,
+html[lang="hi"] h2,
+html[lang="hi"] h3 {
+  letter-spacing: -0.02em;
+  line-height: 1.16;
+}
+
 img {
   display: block;
   max-width: 100%;
@@ -228,8 +239,8 @@ a {
 
 .brand img,
 .footer-brand img {
-  border-radius: 10px;
-  object-fit: cover;
+  border-radius: 50%;
+  object-fit: contain;
 }
 
 .brand-copy {
@@ -256,6 +267,38 @@ a {
   display: flex;
   align-items: center;
   gap: 30px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.language-switcher {
+  display: inline-flex;
+  padding: 3px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--surface);
+}
+
+.language-switcher button {
+  min-width: 34px;
+  height: 28px;
+  padding: 0 8px;
+  border: 0;
+  border-radius: 999px;
+  color: var(--muted);
+  background: transparent;
+  font-size: 0.7rem;
+  font-weight: 800;
+  cursor: pointer;
+}
+
+.language-switcher button[aria-pressed="true"] {
+  color: var(--white);
+  background: var(--blue);
 }
 
 .site-nav > a:not(.nav-call) {
@@ -373,40 +416,43 @@ a {
   margin-top: 32px;
 }
 
-.partner-note {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  margin-top: 34px;
-}
-
-.partner-mark {
-  display: grid;
-  width: 42px;
-  height: 42px;
-  border: 1px solid #bad9e9;
-  border-radius: 50%;
-  color: var(--blue);
-  background: var(--surface-blue);
-  font-size: 0.75rem;
-  font-weight: 850;
-  place-items: center;
-}
-
-.partner-note p {
-  margin: 0;
-  color: var(--muted);
-  font-size: 0.82rem;
-  line-height: 1.4;
-}
-
-.partner-note strong {
-  color: var(--navy);
-}
-
 .hero-visual {
   position: relative;
   padding: 20px 18px 34px 0;
+}
+
+.distributor-feature {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+  margin-top: 64px;
+  padding: 23px 24px;
+  border-block: 1px solid var(--line);
+  text-align: center;
+}
+
+.distributor-feature span {
+  color: var(--navy);
+  font-size: clamp(1.15rem, 2.4vw, 1.5rem);
+  font-weight: 850;
+  letter-spacing: -0.02em;
+}
+
+.distributor-feature strong {
+  color: var(--blue);
+  font-size: clamp(1.3rem, 2.8vw, 1.85rem);
+  letter-spacing: -0.025em;
+}
+
+.distributor-feature em {
+  color: var(--muted);
+  font-size: 0.76rem;
+  font-style: normal;
+  font-weight: 750;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
 }
 
 .hero-image-frame {
@@ -485,7 +531,7 @@ a {
   z-index: 2;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  margin-top: 84px;
+  margin-top: 26px;
   padding: 28px 10px;
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -1011,7 +1057,10 @@ a {
 .solar-form .phone-input input,
 .solar-form .input-suffix input {
   min-width: 0;
+  height: 100%;
   border: 0;
+  border-radius: inherit;
+  background: transparent;
   box-shadow: none;
   font-size: 1rem;
 }
@@ -1287,6 +1336,10 @@ a {
     margin-top: 66px;
   }
 
+  .distributor-feature {
+    margin-top: 50px;
+  }
+
   .proof-strip > div {
     padding: 15px 20px;
   }
@@ -1392,10 +1445,6 @@ a {
 
   .hero-actions .button {
     width: 100%;
-  }
-
-  .partner-note {
-    margin-top: 26px;
   }
 
   .hero-visual {

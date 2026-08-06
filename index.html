@@ -15,8 +15,9 @@
     >
     <meta property="og:type" content="website">
     <meta property="og:image" content="assets/images/logo.png">
-    <link rel="icon" href="assets/images/favicon.jpg" type="image/jpeg">
+    <link rel="icon" href="assets/images/logo-circle-hd.png" type="image/png">
     <link rel="stylesheet" href="styles.css">
+    <script src="projects.config.js" defer></script>
     <script src="script.js" defer></script>
     <title>Third Eye Solar — Rooftop Solar in Kota</title>
   </head>
@@ -26,19 +27,12 @@
     <header class="site-header" id="top">
       <div class="nav-shell page-width">
         <a class="brand" href="#top" aria-label="Third Eye Solar home">
-          <img src="assets/images/favicon.jpg" alt="" width="52" height="52">
+          <img src="assets/images/logo-circle-hd.png" alt="" width="52" height="52">
           <span class="brand-copy">
             <strong>Third Eye Solar</strong>
             <span>Third Eye Tradezone</span>
           </span>
         </a>
-
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
-          <span class="sr-only">Toggle navigation</span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </button>
 
         <nav class="site-nav" id="site-nav" aria-label="Main navigation">
           <a href="#projects">Projects</a>
@@ -50,6 +44,19 @@
             <strong>+91 98282 75532</strong>
           </a>
         </nav>
+
+        <div class="header-actions">
+          <div class="language-switcher" role="group" aria-label="Choose language">
+            <button type="button" data-language="en" aria-pressed="true">EN</button>
+            <button type="button" data-language="hi" aria-pressed="false">हिं</button>
+          </div>
+          <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+            <span class="sr-only">Toggle navigation</span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </button>
+        </div>
       </div>
     </header>
 
@@ -67,15 +74,11 @@
               <a class="button button-primary" href="#apply">Get a solar estimate <span aria-hidden="true">&#8599;</span></a>
               <a class="button button-secondary" href="tel:+919828275532">Talk to an expert</a>
             </div>
-            <div class="partner-note">
-              <span class="partner-mark" aria-hidden="true">PE</span>
-              <p><strong>Authorized Distributor</strong><br>Premier Energies · Kota Division</p>
-            </div>
           </div>
 
           <div class="hero-visual">
             <div class="hero-image-frame">
-              <img src="assets/images/pm-surya-ghar-banner.jpg" alt="A home powered by rooftop solar panels" width="800" height="400">
+              <img src="assets/images/hero-solar-home-hd.png" alt="A modern Indian home powered by rooftop solar panels" width="1536" height="1024">
             </div>
             <div class="hero-badge">
               <span class="hero-badge-icon" aria-hidden="true">&#9728;</span>
@@ -88,8 +91,14 @@
           </div>
         </div>
 
+        <div class="page-width distributor-feature">
+          <span>Authorized Distributor</span>
+          <strong>Premier Energies</strong>
+          <em>Kota Division</em>
+        </div>
+
         <div class="page-width proof-strip" aria-label="Business highlights">
-          <div><strong>38+</strong><span>Projects showcased</span></div>
+          <div><strong>100+</strong><span>Projects completed</span></div>
           <div><strong>₹78,000</strong><span>Subsidy up to 3 kW+</span></div>
           <div><strong>7% onwards</strong><span>Concessional loan ROI</span></div>
           <div><strong>2 service areas</strong><span>Kota and Baran</span></div>
@@ -101,7 +110,7 @@
           <div class="section-heading split-heading">
             <div>
               <p class="eyebrow">Government initiative</p>
-              <h2 id="campaign-heading">Make the most of PM Surya Ghar</h2>
+              <h2 id="campaign-heading">Make the most of PM Surya Ghar: Muft Bijli Yojna</h2>
             </div>
             <p>
               Move to rooftop solar with guidance on eligibility, subsidy documentation, bank finance, installation,
@@ -111,7 +120,7 @@
 
           <div class="campaign-card">
             <div class="campaign-frame">
-              <img id="campaign-image" src="assets/images/hero-namo.png" alt="PM Surya Ghar: Muft Bijli Yojana">
+              <img id="campaign-image" src="assets/images/hero-namo-hd.png" alt="PM Surya Ghar: Muft Bijli Yojana">
               <button class="carousel-button previous" id="campaign-previous" type="button" aria-label="Previous campaign slide">
                 <span aria-hidden="true">&#8592;</span>
               </button>
@@ -126,71 +135,6 @@
               </a>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section class="projects-section section" id="projects" aria-labelledby="projects-title">
-        <div class="page-width">
-          <div class="section-heading split-heading">
-            <div>
-              <p class="eyebrow">Work on the ground</p>
-              <h2 id="projects-title">Solar projects across Rajasthan</h2>
-            </div>
-            <p>Explore residential and commercial systems installed for customers across Kota, Baran, Bundi, and nearby areas.</p>
-          </div>
-
-          <div class="project-carousel" aria-roledescription="carousel" aria-label="Completed solar projects">
-            <div class="project-image-wrap">
-              <img id="project-image" src="assets/images/projects/project-01.jpg" alt="">
-              <button class="carousel-button previous" id="project-previous" type="button" aria-label="Previous project">
-                <span aria-hidden="true">&#8592;</span>
-              </button>
-              <button class="carousel-button next" id="project-next" type="button" aria-label="Next project">
-                <span aria-hidden="true">&#8594;</span>
-              </button>
-            </div>
-            <div class="project-details" aria-live="polite" aria-atomic="true">
-              <div>
-                <p class="project-label">Featured installation</p>
-                <h3 id="project-title"></h3>
-                <p id="project-description"></p>
-              </div>
-              <span class="project-counter" id="project-counter"></span>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="resources-section section" id="resources" aria-labelledby="resources-title">
-        <div class="page-width">
-          <div class="section-heading centered-heading">
-            <p class="eyebrow">Helpful resources</p>
-            <h2 id="resources-title">Everything you need to get started</h2>
-            <p>Quick access to applications, subsidy details, vendor information, and careers.</p>
-          </div>
-
-          <nav class="resource-grid" aria-label="Solar resources">
-            <a href="#apply">
-              <span class="resource-number">01</span>
-              <strong>Apply for rooftop solar</strong>
-              <span class="resource-arrow" aria-hidden="true">&#8599;</span>
-            </a>
-            <a href="https://pmsuryaghar.gov.in/pdf/CFA_structure20240307.pdf" target="_blank" rel="noopener noreferrer">
-              <span class="resource-number">02</span>
-              <strong>Subsidy structure</strong>
-              <span class="resource-arrow" aria-hidden="true">&#8599;</span>
-            </a>
-            <a href="https://www.facebook.com/thirdeyetradezonesolarenergyexpert" target="_blank" rel="noopener noreferrer">
-              <span class="resource-number">03</span>
-              <strong>Empanelled vendor</strong>
-              <span class="resource-arrow" aria-hidden="true">&#8599;</span>
-            </a>
-            <a href="mailto:thirdeyetradezone@gmail.com?subject=Apply%20for%20Job">
-              <span class="resource-number">04</span>
-              <strong>Join our team</strong>
-              <span class="resource-arrow" aria-hidden="true">&#8599;</span>
-            </a>
-          </nav>
         </div>
       </section>
 
@@ -246,6 +190,71 @@
               </ul>
             </article>
           </div>
+        </div>
+      </section>
+
+      <section class="projects-section section" id="projects" aria-labelledby="projects-title">
+        <div class="page-width">
+          <div class="section-heading split-heading">
+            <div>
+              <p class="eyebrow">Work on the ground</p>
+              <h2 id="projects-title">Solar projects across Rajasthan</h2>
+            </div>
+            <p>Explore residential and commercial systems installed for customers across Kota, Baran, Bundi, and nearby areas.</p>
+          </div>
+
+          <div class="project-carousel" aria-roledescription="carousel" aria-label="Completed solar projects">
+            <div class="project-image-wrap">
+              <img id="project-image" src="assets/images/projects/project-02.jpg" alt="">
+              <button class="carousel-button previous" id="project-previous" type="button" aria-label="Previous project">
+                <span aria-hidden="true">&#8592;</span>
+              </button>
+              <button class="carousel-button next" id="project-next" type="button" aria-label="Next project">
+                <span aria-hidden="true">&#8594;</span>
+              </button>
+            </div>
+            <div class="project-details" aria-live="polite" aria-atomic="true">
+              <div>
+                <p class="project-label">Featured installation</p>
+                <h3 id="project-title"></h3>
+                <p id="project-description"></p>
+              </div>
+              <span class="project-counter" id="project-counter"></span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="resources-section section" id="resources" aria-labelledby="resources-title">
+        <div class="page-width">
+          <div class="section-heading centered-heading">
+            <p class="eyebrow">Helpful resources</p>
+            <h2 id="resources-title">Everything you need to get started</h2>
+            <p>Quick access to applications, subsidy details, vendor information, and careers.</p>
+          </div>
+
+          <nav class="resource-grid" aria-label="Solar resources">
+            <a href="#apply">
+              <span class="resource-number">01</span>
+              <strong>Apply for rooftop solar</strong>
+              <span class="resource-arrow" aria-hidden="true">&#8599;</span>
+            </a>
+            <a href="https://pmsuryaghar.gov.in/pdf/CFA_structure20240307.pdf" target="_blank" rel="noopener noreferrer">
+              <span class="resource-number">02</span>
+              <strong>Subsidy structure</strong>
+              <span class="resource-arrow" aria-hidden="true">&#8599;</span>
+            </a>
+            <a href="https://www.facebook.com/thirdeyetradezonesolarenergyexpert" target="_blank" rel="noopener noreferrer">
+              <span class="resource-number">03</span>
+              <strong>Empanelled vendor</strong>
+              <span class="resource-arrow" aria-hidden="true">&#8599;</span>
+            </a>
+            <a href="mailto:thirdeyetradezone@gmail.com?subject=Apply%20for%20Job">
+              <span class="resource-number">04</span>
+              <strong>Join our team</strong>
+              <span class="resource-arrow" aria-hidden="true">&#8599;</span>
+            </a>
+          </nav>
         </div>
       </section>
 
@@ -359,7 +368,7 @@
     <footer class="site-footer">
       <div class="page-width footer-grid">
         <div class="footer-brand">
-          <img src="assets/images/favicon.jpg" alt="" width="44" height="44">
+          <img src="assets/images/logo-circle-hd.png" alt="" width="44" height="44">
           <div><strong>Third Eye Solar</strong><span>Clean energy for Kota</span></div>
         </div>
         <div class="footer-meta">
