@@ -68,6 +68,9 @@ const hindiTranslations = new Map([
   ["Solar projects across Rajasthan", "राजस्थान भर में सोलर परियोजनाएँ"],
   ["Explore residential and commercial systems installed for customers across Kota, Baran, Bundi, and nearby areas.", "कोटा, बारां, बूंदी और आसपास के क्षेत्रों में लगाए गए घरेलू और व्यावसायिक सिस्टम देखें।"],
   ["Featured installation", "प्रमुख इंस्टॉलेशन"],
+  ["View full size", "पूरा आकार देखें"],
+  ["View full-size project image", "परियोजना की पूरी तस्वीर देखें"],
+  ["Close full-size image", "पूरी तस्वीर बंद करें"],
   ["Project Under PM Surya Ghar", "पीएम सूर्य घर के अंतर्गत परियोजना"],
   ["Project Under PM Surya Ghar Scheme", "पीएम सूर्य घर योजना के अंतर्गत परियोजना"],
   ["Under PM Surya Ghar Scheme", "पीएम सूर्य घर योजना के अंतर्गत"],
@@ -195,6 +198,11 @@ const projectImage = document.querySelector("#project-image");
 const projectTitle = document.querySelector("#project-title");
 const projectDescription = document.querySelector("#project-description");
 const projectCounter = document.querySelector("#project-counter");
+const projectImageButton = document.querySelector("#project-image-button");
+const projectLightbox = document.querySelector("#project-lightbox");
+const lightboxImage = document.querySelector("#lightbox-image");
+const lightboxTitle = document.querySelector("#lightbox-title");
+const lightboxDescription = document.querySelector("#lightbox-description");
 let projectIndex = 0;
 
 function renderProject() {
@@ -205,6 +213,32 @@ function renderProject() {
   projectDescription.textContent = translateText(project.description);
   projectCounter.textContent = `${projectIndex + 1}/${projects.length}`;
 }
+
+function openProjectLightbox() {
+  const project = projects[projectIndex];
+  lightboxImage.src = project.image;
+  lightboxImage.alt = projectImage.alt;
+  lightboxTitle.textContent = translateText(project.title);
+  lightboxDescription.textContent = translateText(project.description);
+  projectLightbox.showModal();
+  document.body.classList.add("lightbox-open");
+}
+
+function closeProjectLightbox() {
+  projectLightbox.close();
+}
+
+projectImageButton.addEventListener("click", openProjectLightbox);
+document.querySelector("#lightbox-close").addEventListener("click", closeProjectLightbox);
+
+projectLightbox.addEventListener("click", (event) => {
+  if (event.target === projectLightbox) closeProjectLightbox();
+});
+
+projectLightbox.addEventListener("close", () => {
+  document.body.classList.remove("lightbox-open");
+  projectImageButton.focus();
+});
 
 document.querySelector("#project-previous").addEventListener("click", () => {
   projectIndex = (projectIndex - 1 + projects.length) % projects.length;

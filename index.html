@@ -207,7 +207,19 @@
 
           <div class="project-carousel" aria-roledescription="carousel" aria-label="Completed solar projects">
             <div class="project-image-wrap">
-              <img id="project-image" src="assets/images/projects/project-02.jpg" alt="">
+              <button
+                class="project-image-button"
+                id="project-image-button"
+                type="button"
+                aria-haspopup="dialog"
+                aria-label="View full-size project image"
+              >
+                <img id="project-image" src="assets/images/projects/project-02.jpg" alt="">
+                <span class="project-image-hint" aria-hidden="true">
+                  <span class="project-image-hint-icon">&#8599;</span>
+                  View full size
+                </span>
+              </button>
               <button class="carousel-button previous" id="project-previous" type="button" aria-label="Previous project">
                 <span aria-hidden="true">&#8592;</span>
               </button>
@@ -226,6 +238,24 @@
           </div>
         </div>
       </section>
+
+      <dialog
+        class="project-lightbox"
+        id="project-lightbox"
+        aria-labelledby="lightbox-title"
+        aria-describedby="lightbox-description"
+      >
+        <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Close full-size image">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <figure>
+          <img id="lightbox-image" alt="">
+          <figcaption>
+            <strong id="lightbox-title"></strong>
+            <span id="lightbox-description"></span>
+          </figcaption>
+        </figure>
+      </dialog>
 
       <section class="resources-section section" id="resources" aria-labelledby="resources-title">
         <div class="page-width">

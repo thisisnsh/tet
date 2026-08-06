@@ -38,7 +38,8 @@ body {
   text-rendering: optimizeLegibility;
 }
 
-body.nav-open {
+body.nav-open,
+body.lightbox-open {
   overflow: hidden;
 }
 
@@ -704,6 +705,127 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.project-image-button {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  background: transparent;
+  cursor: zoom-in;
+}
+
+.project-image-button:focus-visible {
+  outline: 4px solid var(--orange);
+  outline-offset: -4px;
+}
+
+.project-image-hint {
+  position: absolute;
+  z-index: 2;
+  right: 20px;
+  bottom: 18px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 13px;
+  border: 1px solid rgb(255 255 255 / 38%);
+  border-radius: 999px;
+  color: var(--white);
+  background: rgb(12 41 60 / 78%);
+  box-shadow: 0 8px 24px rgb(0 0 0 / 18%);
+  font-size: 0.75rem;
+  font-weight: 750;
+  line-height: 1;
+  pointer-events: none;
+  backdrop-filter: blur(8px);
+}
+
+.project-image-hint-icon {
+  font-size: 0.95rem;
+}
+
+.project-lightbox {
+  width: min(96vw, 1500px);
+  max-width: none;
+  height: 94vh;
+  max-height: none;
+  padding: 0;
+  border: 0;
+  border-radius: var(--radius);
+  color: var(--white);
+  background: #07141d;
+  box-shadow: 0 30px 100px rgb(0 0 0 / 45%);
+  overflow: hidden;
+}
+
+.project-lightbox::backdrop {
+  background: rgb(3 12 18 / 88%);
+  backdrop-filter: blur(5px);
+}
+
+.project-lightbox figure {
+  display: grid;
+  grid-template-rows: minmax(0, 1fr) auto;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.project-lightbox img {
+  width: 100%;
+  height: 100%;
+  min-height: 0;
+  object-fit: contain;
+}
+
+.project-lightbox figcaption {
+  display: grid;
+  gap: 2px;
+  padding: 16px 66px 18px 22px;
+  border-top: 1px solid rgb(255 255 255 / 12%);
+  background: #0c202d;
+}
+
+.project-lightbox figcaption strong {
+  font-size: 0.95rem;
+  line-height: 1.35;
+}
+
+.project-lightbox figcaption span {
+  color: rgb(255 255 255 / 70%);
+  font-size: 0.8rem;
+}
+
+.project-lightbox figcaption span:empty {
+  display: none;
+}
+
+.lightbox-close {
+  position: absolute;
+  z-index: 2;
+  top: 14px;
+  right: 14px;
+  display: grid;
+  width: 44px;
+  height: 44px;
+  padding: 0 0 3px;
+  border: 1px solid rgb(255 255 255 / 28%);
+  border-radius: 50%;
+  color: var(--white);
+  background: rgb(7 20 29 / 76%);
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+  place-items: center;
+  backdrop-filter: blur(8px);
+}
+
+.lightbox-close:hover,
+.lightbox-close:focus-visible {
+  color: var(--navy);
+  background: var(--white);
 }
 
 .project-details {
@@ -1546,6 +1668,21 @@ a {
   .project-image-wrap {
     height: 72vw;
     min-height: 285px;
+  }
+
+  .project-image-hint {
+    right: 12px;
+    bottom: 12px;
+  }
+
+  .project-lightbox {
+    width: 100vw;
+    height: 100dvh;
+    border-radius: 0;
+  }
+
+  .project-lightbox figcaption {
+    padding: 14px 62px 15px 16px;
   }
 
   .project-details {
