@@ -1250,6 +1250,10 @@ a {
     display: block;
   }
 
+  .header-call {
+    display: none;
+  }
+
   .nav-toggle[aria-expanded="true"] > span:nth-child(2) {
     transform: translateY(6px) rotate(45deg);
   }
