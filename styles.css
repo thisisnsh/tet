@@ -476,6 +476,8 @@ a {
 .solar-form .phone-input input {
   min-width: 0;
   border-bottom: 0;
+  font-size: 1rem;
+  line-height: 1.5;
 }
 
 .solar-form .phone-input input:focus {
