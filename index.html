@@ -322,7 +322,13 @@
         <button class="lightbox-close" id="lightbox-close" type="button" aria-label="Close full-size image">
           <span aria-hidden="true">&times;</span>
         </button>
-        <figure>
+        <button class="lightbox-navigation previous" id="lightbox-previous" type="button" aria-label="Previous project">
+          <span aria-hidden="true">&#8592;</span>
+        </button>
+        <button class="lightbox-navigation next" id="lightbox-next" type="button" aria-label="Next project">
+          <span aria-hidden="true">&#8594;</span>
+        </button>
+        <figure aria-live="polite" aria-atomic="true">
           <img id="lightbox-image" alt="">
           <figcaption>
             <strong id="lightbox-title"></strong>

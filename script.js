@@ -71,6 +71,8 @@ const hindiTranslations = new Map([
   ["View full size", "पूरा आकार देखें"],
   ["View full-size project image", "परियोजना की पूरी तस्वीर देखें"],
   ["Close full-size image", "पूरी तस्वीर बंद करें"],
+  ["Previous project", "पिछली परियोजना"],
+  ["Next project", "अगली परियोजना"],
   ["Project Under PM Surya Ghar", "पीएम सूर्य घर के अंतर्गत परियोजना"],
   ["Project Under PM Surya Ghar Scheme", "पीएम सूर्य घर योजना के अंतर्गत परियोजना"],
   ["Under PM Surya Ghar Scheme", "पीएम सूर्य घर योजना के अंतर्गत"],
@@ -214,12 +216,22 @@ function renderProject() {
   projectCounter.textContent = `${projectIndex + 1}/${projects.length}`;
 }
 
-function openProjectLightbox() {
+function renderLightboxProject() {
   const project = projects[projectIndex];
   lightboxImage.src = project.image;
   lightboxImage.alt = projectImage.alt;
   lightboxTitle.textContent = translateText(project.title);
   lightboxDescription.textContent = translateText(project.description);
+}
+
+function moveProject(offset) {
+  projectIndex = (projectIndex + offset + projects.length) % projects.length;
+  renderProject();
+  if (projectLightbox.open) renderLightboxProject();
+}
+
+function openProjectLightbox() {
+  renderLightboxProject();
   projectLightbox.showModal();
   document.body.classList.add("lightbox-open");
 }
@@ -241,16 +253,28 @@ projectLightbox.addEventListener("close", () => {
 });
 
 document.querySelector("#project-previous").addEventListener("click", () => {
-  projectIndex = (projectIndex - 1 + projects.length) % projects.length;
-  renderProject();
+  moveProject(-1);
 });
 
 document.querySelector("#project-next").addEventListener("click", () => {
-  projectIndex = (projectIndex + 1) % projects.length;
-  renderProject();
+  moveProject(1);
 });
 
+document.querySelector("#lightbox-previous").addEventListener("click", () => moveProject(-1));
+document.querySelector("#lightbox-next").addEventListener("click", () => moveProject(1));
+
 document.addEventListener("keydown", (event) => {
+  if (projectLightbox.open) {
+    if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      moveProject(-1);
+    } else if (event.key === "ArrowRight") {
+      event.preventDefault();
+      moveProject(1);
+    }
+    return;
+  }
+
   const carousel = document.querySelector(".project-carousel");
   if (!carousel.contains(document.activeElement)) return;
 
