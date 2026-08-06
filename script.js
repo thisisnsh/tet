@@ -81,6 +81,7 @@ const hindiTranslations = new Map([
   ["Let's talk solar", "आइए सोलर पर बात करें"],
   ["Ready to make your own electricity?", "अपनी बिजली खुद बनाने के लिए तैयार हैं?"],
   ["Share a few details and our team will help you understand the right plant size, subsidy, and next steps.", "कुछ जानकारी साझा करें और हमारी टीम सही प्लांट क्षमता, सब्सिडी और अगले कदम समझने में आपकी मदद करेगी।"],
+  ["Owner", "मालिक"],
   ["Primary phone", "मुख्य फोन"],
   ["Alternate phone", "वैकल्पिक फोन"],
   ["Email", "ईमेल"],
