@@ -426,14 +426,27 @@ a {
 
 .distributor-feature {
   display: flex;
-  align-items: baseline;
+  align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 8px 16px;
+  gap: 18px 32px;
   margin-top: 64px;
   padding: 23px 24px;
   border-block: 1px solid var(--line);
   text-align: center;
+}
+
+.distributor-brand {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 8px 16px;
+}
+
+.distributor-brand + .distributor-brand {
+  padding-left: 32px;
+  border-left: 1px solid var(--line);
 }
 
 .distributor-feature span {
@@ -456,6 +469,16 @@ a {
   font-weight: 750;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+}
+
+@media (max-width: 760px) {
+  .distributor-brand + .distributor-brand {
+    width: 100%;
+    padding-top: 18px;
+    padding-left: 0;
+    border-top: 1px solid var(--line);
+    border-left: 0;
+  }
 }
 
 .hero-image-frame {
